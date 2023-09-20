@@ -110,7 +110,8 @@ header p {
 }
 .collection .card .picture {
   width: 100%;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .collection .card .name {
   font-size: 1.5rem;
@@ -119,8 +120,13 @@ header p {
   font-size: 1.2rem;
   opacity: 0.8;
 }
-.collection .card .edition {
-  margin-top: 1rem;
+.collection .card .div2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
 }
 .collection .card .genre {
   margin: 2rem 1rem;

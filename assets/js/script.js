@@ -123,19 +123,24 @@ collection.forEach((collection) => {
   card.appendChild(author);
   author.classList.add("author");
 
+  const div2 = document.createElement("div");
+  div2.textContent = collection.div2;
+  card.appendChild(div2);
+  div2.classList.add("div2");
+  
   const edition = document.createElement("p");
   edition.textContent = collection.edition;
-  card.appendChild(edition);
+  div2.appendChild(edition);
   edition.classList.add("edition");
 
   const format = document.createElement("p");
   format.textContent = collection.format;
-  card.appendChild(format);
+  div2.appendChild(format);
   format.classList.add("format");
 
   const releaseYear = document.createElement("p");
   releaseYear.textContent = collection.releaseYear;
-  card.appendChild(releaseYear);
+  div2.appendChild(releaseYear);
   releaseYear.classList.add("releaseYear");
 
   // const genre = document.createElement("p");
@@ -181,6 +186,3 @@ delButton.forEach(function (button) {
 });
 
 // add function to sort
-
-
-
