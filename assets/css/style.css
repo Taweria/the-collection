@@ -58,30 +58,15 @@ body {
   font-family: "Gentium Book Plus", serif;
 }
 
-.genre {
-  margin: 2rem 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+.tri {
+  font-size: 1.2rem;
 }
-.genre .genre1 {
-  background-color: #e696b5;
-  border-radius: 10px;
-  padding: 0.5rem;
-}
-.genre .genre2 {
-  background-color: #8bd3dd;
-  border-radius: 10px;
-  padding: 0.5rem;
-}
-.genre .genre3 {
-  background-color: #e6961d;
-  border-radius: 10px;
-  padding: 0.5rem;
+.tri select {
+  background-color: #f582ae;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: left;
+  padding: 0.1rem 1.5rem;
 }
 
 .delItem {
@@ -95,6 +80,9 @@ body {
 }
 .delItem:hover {
   cursor: pointer;
+}
+.delItem .delItemImg {
+  width: 20px;
 }
 
 body {
@@ -155,6 +143,31 @@ header p {
   justify-content: center;
   text-align: center;
   gap: 2rem;
+}
+.collection .card .genre {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.collection .card .genre .genre1 {
+  background-color: #e696b5;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.collection .card .genre .genre2 {
+  background-color: #8bd3dd;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.collection .card .genre .genre3 {
+  background-color: #e6961d;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
 @media only screen and (min-width: 100px) {
