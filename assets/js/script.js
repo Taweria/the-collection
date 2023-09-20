@@ -10,7 +10,7 @@ const collection = [
       delItem: "Delete",
     },
     {
-        name: "Shades of magic (1-3)",
+        name: "Shades of magic",
         author: "V.E. Schwab",
         edition: "Lumen",
         format: "Broché",
@@ -50,7 +50,7 @@ const collection = [
         delItem: "Delete",
       },
       {
-        name: "Red Queen (1-4)",
+        name: "Red Queen",
         author: "Victoria Aveyard",
         edition: "LGF - Le Livre de Poche",
         format: "Poche",
@@ -60,7 +60,7 @@ const collection = [
         delItem: "Delete",
       },
       {
-        name: "Kalliopée (1-3)",
+        name: "Kalliopée",
         author: "Koko Nhan",
         edition: "Black Ink",
         format: "Broché",
@@ -70,7 +70,7 @@ const collection = [
         delItem: "Delete",
       },
       {
-        name: "The Effigies (1-3)",
+        name: "The Effigies",
         author: "Sarah Raughley",
         edition: "Lumen",
         format: "Broché",
@@ -80,7 +80,7 @@ const collection = [
         delItem: "Delete",
       },
       {
-        name: "Skyhunter (1-2)",
+        name: "Skyhunter",
         author: "Marie Lu",
         edition: "De Saxus",
         format: "Broché",
@@ -90,7 +90,7 @@ const collection = [
         delItem: "Delete",
       },
       {
-        name: "Les arcanes de tarot (1-4)",
+        name: "Les arcanes de tarot",
         author: "Charly Farrow",
         edition: "Auto-édité",
         format: "Broché",

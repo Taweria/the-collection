@@ -105,7 +105,7 @@ header p {
   transform: scale(1.05);
   border: 1px solid #f582ae;
 }
-.collection .card .name, .collection .card .author, .collection .card .edition, .collection .card .format, .collection .card .releaseYear, .collection .card .genre {
+.collection .card .name, .collection .card .author, .collection .card .genre {
   margin-left: 1rem;
 }
 .collection .card .picture {
