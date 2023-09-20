@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +55,7 @@ table {
 
 body {
   color: #001858;
+  font-family: "Gentium Book Plus", serif;
 }
 
 .delItem {
@@ -91,8 +93,7 @@ header p {
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1rem;
   row-gap: 2rem;
-  margin-top: 3rem;
-  margin: 2rem 2rem;
+  margin: 3rem 2rem;
 }
 .collection .card {
   width: 100%;

@@ -52,7 +52,7 @@ const collection = [
       {
         name: "Red Queen",
         author: "Victoria Aveyard",
-        edition: "LGF - Le Livre de Poche",
+        edition: "Le Livre de Poche",
         format: "Poche",
         releaseYear: 2016,
         picture: "../../assets/storage/red-queen.jpg",
@@ -142,11 +142,6 @@ collection.forEach((collection) => {
   releaseYear.textContent = collection.releaseYear;
   div2.appendChild(releaseYear);
   releaseYear.classList.add("releaseYear");
-
-  // const genre = document.createElement("p");
-  // genre.textContent = collection.genre.join(" , ");
-  // card.appendChild(genre);
-  // genre.classList.add("genre");
 
   const genre = document.createElement("div");
   card.appendChild(genre);
