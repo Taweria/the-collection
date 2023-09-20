@@ -113,7 +113,7 @@ collection.forEach((collection) => {
   card.appendChild(picture);
   picture.classList.add("picture");
 
-  const name = document.createElement("p");
+  const name = document.createElement("h2");
   name.textContent = collection.name;
   card.appendChild(name);
   name.classList.add("name");
@@ -147,17 +147,17 @@ collection.forEach((collection) => {
   card.appendChild(genre);
   genre.classList.add("genre");
 
-  const genre1 = document.createElement("p");
+  const genre1 = document.createElement("button");
   genre1.textContent = collection.genre[0];
   genre.appendChild(genre1);
   genre1.classList.add("genre1");
 
-  const genre2 = document.createElement("p");
+  const genre2 = document.createElement("button");
   genre2.textContent = collection.genre[1];
   genre.appendChild(genre2);
   genre2.classList.add("genre2");
 
-  const genre3 = document.createElement("p");
+  const genre3 = document.createElement("button");
   genre3.textContent = collection.genre[2];
   genre.appendChild(genre3);
   genre3.classList.add("genre3");

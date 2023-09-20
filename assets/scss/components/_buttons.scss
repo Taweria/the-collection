@@ -1,3 +1,32 @@
+.genre{
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .genre1{
+        background-color: $--primaryColor;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+
+    .genre2{
+        background-color: $--secondaryColor;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+
+    .genre3{
+        background-color: $--tertiaryColor;
+        border-radius: 10px;
+        padding: 0.5rem;
+    }
+}
+
 .delItem{
     background-color: $--buttonColor;
     border: none;
