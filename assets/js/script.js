@@ -6,7 +6,7 @@ const collection = [
       format: "Poche",
       releaseYear: 2023,
       picture: "../../assets/storage/extincta.jpg",
-      genre: ["Dystopie", "Young Adult", "Fantasy"],
+      genre: ["Dystopie", "Young Adult", "Fantaisie"],
       delItem: "Delete",
     },
     {
@@ -16,7 +16,7 @@ const collection = [
         format: "Broché",
         releaseYear: 2017,
         picture: "../../assets/storage/shades-of-magic.jpg",
-        genre: ["Fantasie", "Young Adult", "Aventure"],
+        genre: ["Fantaisie", "Young Adult", "Aventure"],
         delItem: "Delete",
       },
       {
@@ -46,7 +46,7 @@ const collection = [
         format: "Broché",
         releaseYear: 2022,
         picture: "../../assets/storage/vanja-et-le-loup.jpg",
-        genre: ["Contes revisités", "Fantasy", "Young Adult"],
+        genre: ["Contes revisités", "Fantaisie", "Young Adult"],
         delItem: "Delete",
       },
       {
@@ -66,7 +66,7 @@ const collection = [
         format: "Broché",
         releaseYear: 2021 ,
         picture: "../../assets/storage/kalliopee.jpg",
-        genre: ["Dystopie", "Romance", "Fantasy"],
+        genre: ["Dystopie", "Romance", "Fantaisie"],
         delItem: "Delete",
       },
       {
@@ -96,7 +96,7 @@ const collection = [
         format: "Broché",
         releaseYear: "Inconnu",
         picture: "../../assets/storage/les_arcanes_de_tarot.jpg",
-        genre: ["Fantasy", "Dystopie", "Dieux"],
+        genre: ["Fantaisie", "Dystopie", "Dieux"],
         delItem: "Delete",
       },
       
@@ -107,7 +107,7 @@ const cards = document.querySelector(".collection")
 collection.forEach((collection) => {
   const card = document.createElement("article");
   card.classList.add("card");
-
+  
   const picture = document.createElement("img");
   picture.src = collection.picture;
   card.appendChild(picture);

@@ -100,6 +100,7 @@ header p {
   background-color: #f3d2c1;
   border-radius: 10px;
   position: relative;
+  transition: transform 500ms ease;
 }
 .collection .card:hover {
   transform: scale(1.05);

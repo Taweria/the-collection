@@ -12,6 +12,7 @@
         background-color: $--cardColor;
         border-radius: 10px;
         position: relative;
+        transition: transform 500ms ease;
 
         &:hover{
             transform: scale(1.05);
