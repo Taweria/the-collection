@@ -1,1 +1,1 @@
-# simple-page-template
+# the-collection
