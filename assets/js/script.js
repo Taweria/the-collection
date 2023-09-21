@@ -201,36 +201,58 @@ function generateHTML(array) {
 //call function with filtred collection
 generateHTML(filteredCollection);
 
-
-// add function to remove elements
-let delButton = document.querySelectorAll(".delItem");
-
-delButton.forEach(function (button) {
-  button.addEventListener("click", function () {
-    button.parentNode.classList.add("animate");
-    let listItem = button.parentNode;
-    setTimeout(()=>{
-      listItem.parentNode.removeChild(listItem);
-    },500);
-  })
-});
+// function to delete from the collection
+function deleteFromCollection(title) {
+    let itemIndex = collection.findIndex(item => item.name == title);
+    collection.splice(itemIndex, 1);
+}
 
 
-// add function to sort
+function listenForDelete() {
+  // add function to remove elements
+  let delButton = document.querySelectorAll(".delItem");
+  // on click function
+  delButton.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // add class to animate
+      button.parentNode.classList.add("animate");
+      // get the book title and delete it
+      let listItem = button.parentNode;
+      deleteFromCollection(listItem.getElementsByTagName("h2")[0].innerText);
+      // time out for animation
+      setTimeout(()=>{
+        listItem.parentNode.removeChild(listItem);
+      },500);
+    })
+  });
+}
+listenForDelete();
+
+
+
+
 const options = document.getElementById('genre-select')
+// event listener on change option (input)
 options.addEventListener("change", function () {
   filterByGenre(options.value)
 })
 
-
+// add the function to sort
 function filterByGenre(filterString) {
+  // if the value option is none
   if (filterString == "none") {
     cards.innerText = "";
+    //generate the collection
     generateHTML(collection);
+    // without the deleted ones
+    listenForDelete();
   }
   else{
     filteredCollection = collection.filter(item => item.genre.includes(filterString));
     cards.innerText = "";
+    // generate filter collection
     generateHTML(filteredCollection);
+    // without the deleted ones
+    listenForDelete();
   }
 }
