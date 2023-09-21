@@ -207,9 +207,11 @@ let delButton = document.querySelectorAll(".delItem");
 
 delButton.forEach(function (button) {
   button.addEventListener("click", function () {
+    button.parentNode.classList.add("animate");
     let listItem = button.parentNode;
-    listItem.parentNode.removeChild(listItem);
-   
+    setTimeout(()=>{
+      listItem.parentNode.removeChild(listItem);
+    },500);
   })
 });
 

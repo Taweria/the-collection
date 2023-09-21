@@ -133,7 +133,9 @@ header p {
   background-color: #f3d2c1;
   border-radius: 10px;
   position: relative;
-  transition: transform 500ms ease;
+}
+.collection .card.animate {
+  animation: deleteCard 500ms linear;
 }
 .collection .card:hover {
   transform: scale(1.05);
@@ -188,6 +190,14 @@ header p {
   padding: 0.5rem;
 }
 
+@keyframes deleteCard {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @media only screen and (min-width: 100px) {
   .collection {
     grid-template-columns: repeat(1, 1fr);
