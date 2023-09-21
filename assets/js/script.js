@@ -7,7 +7,7 @@ const collection = [
       releaseYear: 2023,
       picture: "../../assets/storage/extincta.jpg",
       genre: ["Dystopie", "Young Adult", "Fantaisie"],
-      delItem: "../../assets/storage/trash.png",
+      delItem: "./assets/storage/trash.png",
       link: "https://booknode.com/extincta_03071615",
     },
     {
