@@ -8,6 +8,8 @@ const collection = [
       picture: "../../assets/storage/extincta.jpg",
       genre: ["Dystopie", "Young Adult", "Fantaisie"],
       delItem: "../../assets/storage/trash.png",
+      learnMore: "Learn More",
+      link: "https://booknode.com/extincta_03071615",
     },
     {
         name: "Shades of magic",
@@ -18,6 +20,8 @@ const collection = [
         picture: "../../assets/storage/shades-of-magic.jpg",
         genre: ["Fantaisie", "Young Adult", "Aventure"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/shades_of_magic_tome_1_01494415",
       },
       {
         name: "La vie invisible d'Addie Larue",
@@ -28,6 +32,8 @@ const collection = [
         picture: "../../assets/storage/La-Vie-invisible-d-Addie-Larue.jpg",
         genre: ["Fantastique", "Malédiction", "Immortalité"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/la_vie_invisible_daddie_larue_02439564",
       },
       {
         name: "Poster Girl",
@@ -38,6 +44,8 @@ const collection = [
         picture: "../../assets/storage/poster_girl.jpg",
         genre: ["Dystopie", "Science-Fiction", "Thriller"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/poster_girl_03455714",
       },
       {
         name: "Vanja et le loup",
@@ -48,6 +56,8 @@ const collection = [
         picture: "../../assets/storage/vanja-et-le-loup.jpg",
         genre: ["Contes revisités", "Fantaisie", "Young Adult"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/vanja_et_le_loup_03401252",
       },
       {
         name: "Red Queen",
@@ -58,6 +68,8 @@ const collection = [
         picture: "../../assets/storage/red-queen.jpg",
         genre: ["Dystopie", "Young Adult", "Fantaisie"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/red_queen_tome_1_01338074",
       },
       {
         name: "Kalliopée",
@@ -68,6 +80,8 @@ const collection = [
         picture: "../../assets/storage/kalliopee.jpg",
         genre: ["Dystopie", "Romance", "Fantaisie"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/kalliopee_tome_1_le_sacrifice_dune_princesse_03362539",
       },
       {
         name: "The Effigies",
@@ -78,6 +92,8 @@ const collection = [
         picture: "../../assets/storage/the-effigies.jpg",
         genre: ["Dystopie", "Young Adult", "Fantastique"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/the_effigies_tome_1_les_flammes_du_destin_02129643",
       },
       {
         name: "Skyhunter",
@@ -88,6 +104,8 @@ const collection = [
         picture: "../../assets/storage/skyhunter.jpg",
         genre: ["Dystopie", "Young Adult", "Aventure"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/skyhunter_tome_1_larme_secrete_03356804",
       },
       {
         name: "Les arcanes de tarot",
@@ -98,6 +116,8 @@ const collection = [
         picture: "../../assets/storage/les_arcanes_de_tarot.jpg",
         genre: ["Fantaisie", "Dystopie", "Dieux"],
         delItem: "../../assets/storage/trash.png",
+        learnMore: "Learn More",
+        link: "https://booknode.com/les_arcanes_de_tarot_tome_1_le_pendu_03429086",
       },    
 ];
 let filteredCollection = collection
@@ -172,14 +192,25 @@ function generateHTML(array) {
     delItemImg.src = collection.delItem;
     delItem.appendChild(delItemImg);
     delItemImg.classList.add("delItemImg");
-  
-  
+
+    const learnMore = document.createElement("button");
+    learnMore.classList.add("learnMore");
+    card.appendChild(learnMore);
+
+    const learnMoreLink = document.createElement("a");
+    learnMoreLink.textContent = "Learn More";
+    learnMoreLink.href = collection.link;
+    learnMoreLink.target = "_blank";
+    learnMoreLink.classList.add("learnMoreLink");
+    learnMore.appendChild(learnMoreLink);
+    
     cards.appendChild(card);
   });
 }
 
-//call function
+//call function with filtred collection
 generateHTML(filteredCollection);
+
 
 // add function to remove elements
 let delButton = document.querySelectorAll(".delItem");
@@ -188,14 +219,18 @@ delButton.forEach(function (button) {
   button.addEventListener("click", function () {
     let listItem = button.parentNode;
     listItem.parentNode.removeChild(listItem);
+   
   })
 });
 
+
+// add function to sort
 const options = document.getElementById('genre-select')
 options.addEventListener("change", function () {
   filterByGenre(options.value)
 })
-// add function to sort
+
+
 function filterByGenre(filterString) {
   if (filterString == "none") {
     cards.innerText = "";

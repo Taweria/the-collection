@@ -15,3 +15,23 @@
         width: 20px;
     }
 }
+
+.learnMore{
+    background-color: $--buttonColor;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+
+    a{
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+
+        &:visited{
+            color: $--fontColor;
+        }
+    }
+}
