@@ -188,7 +188,7 @@ function generateHTML(array) {
     card.appendChild(learnMore);
 
     const learnMoreLink = document.createElement("a");
-    learnMoreLink.textContent = "Learn More";
+    learnMoreLink.textContent = "Plus d'infos";
     learnMoreLink.href = collection.link;
     learnMoreLink.target = "_blank";
     learnMoreLink.classList.add("learnMoreLink");
